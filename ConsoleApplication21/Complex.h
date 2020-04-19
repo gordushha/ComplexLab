@@ -5,11 +5,12 @@ using namespace std;
 class Complex
 {
 public:
-	Complex();
-	Complex(double x, double y);
-	Complex(Complex& A);
+	Complex();//конструктор по умлчанию
+	Complex(double x, double y);//конструктор инициализации
+	Complex(Complex& A);//конструктор копирования
 	void set(double x, double y);
 	Complex get() const;
+	//перегрузка операторов:
 	friend Complex operator + (Complex& x, Complex& y);
 	friend Complex operator * (Complex& x, Complex& y);
 	friend Complex operator - (Complex& x, Complex& y);
@@ -20,6 +21,6 @@ public:
 	friend istream& operator >> (istream& in, Complex& y);
 
 private:
-	double Re;
-	double Im;
+	double Re; //вещественная часть
+	double Im;//мнимая часть
 };
