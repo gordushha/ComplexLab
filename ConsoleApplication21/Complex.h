@@ -10,6 +10,8 @@ public:
 	Complex(Complex& A);//конструктор копирования
 	void set(double x, double y);
 	Complex get() const;
+	double getRe() const;
+	double getIm() const;
 	//перегрузка операторов:
 	friend Complex operator + (Complex& x, Complex& y);
 	friend Complex operator * (Complex& x, Complex& y);

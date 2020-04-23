@@ -30,6 +30,16 @@ Complex Complex::get() const
 	return z;
 }
 
+double Complex::getRe() const
+{
+	return Re;
+}
+
+double Complex::getIm() const
+{
+	return Im;
+}
+
 Complex operator + (Complex& x, Complex& y)
 {
 	Complex z;
@@ -65,6 +75,8 @@ Complex operator / (Complex& x, Complex& y)
 
 Complex& Complex:: operator =(const Complex& x)
 {
+	if (&x == this)
+		return *this;
 	Re = x.Re;
 	Im = x.Im;
 	return *this;
